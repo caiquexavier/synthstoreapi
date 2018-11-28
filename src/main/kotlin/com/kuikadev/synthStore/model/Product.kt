@@ -15,5 +15,6 @@ data class Product(
         val id: Long = 0L,
         val title: String = "",
         val description: String = "",
-        val price: BigDecimal = BigDecimal.ZERO
+        val price: BigDecimal = BigDecimal.ZERO,
+        val imageSource: String = ""
 )

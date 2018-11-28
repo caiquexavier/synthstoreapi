@@ -15,14 +15,14 @@ class ProductControllerTests {
 
     @Test
     fun testApplyDiscount() {
-        val product = Product(UUID.randomUUID(), "Test Product", "Testing", 1000.toBigDecimal())
+        val product = Product(1, "Test Product", "Testing", 1000.toBigDecimal(), "")
         val result = productController.applyDiscount(product, 0.1.toBigDecimal())
         assert(result.price == 900.0.toBigDecimal())
     }
 
     @Test
     fun testApplyDiscountHalfPrice() {
-        val product = Product(UUID.randomUUID(), "Test Product", "Testing", 1000.toBigDecimal())
+        val product = Product(2, "Test Product", "Testing", 1000.toBigDecimal(), "")
         val result = productController.applyDiscount(product, 0.5.toBigDecimal())
         assert(result.price == 500.0.toBigDecimal())
     }

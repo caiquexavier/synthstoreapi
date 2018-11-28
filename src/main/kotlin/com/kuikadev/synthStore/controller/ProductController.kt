@@ -14,6 +14,7 @@ class ProductController {
     @Autowired
     lateinit var productRepository: ProductRepository
 
+    @CrossOrigin(origins = ["http://localhost:3000"])
     @GetMapping
     fun list(): List<Product> {
         return productRepository.findAll().toList()
